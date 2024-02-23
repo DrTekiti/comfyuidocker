@@ -45,6 +45,35 @@ else
     (cd $this_node_dir && git pull)
 fi
 
+this_node_dir=${nodes_dir}/ComfyUI-VideoHelperSuite
+if [[ ! -d $this_node_dir ]]; then
+    git clone https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite $this_node_dir
+else
+    (cd $this_node_dir && git pull)
+fi
+
+this_node_dir=${nodes_dir}/ComfyUI-RAVE
+if [[ ! -d $this_node_dir ]]; then
+    git clone https://github.com/spacepxl/ComfyUI-RAVE/tree/main $this_node_dir
+else
+    (cd $this_node_dir && git pull)
+fi
+
+this_node_dir=${nodes_dir}/ComfyUI_Noise
+if [[ ! -d $this_node_dir ]]; then
+    git clone https://github.com/BlenderNeko/ComfyUI_Noise $this_node_dir
+else
+    (cd $this_node_dir && git pull)
+fi
+
+this_node_dir=${nodes_dir}/comfyui-workspace-manager
+if [[ ! -d $this_node_dir ]]; then
+    git clone https://github.com/11cafe/comfyui-workspace-manager $this_node_dir
+else
+    (cd $this_node_dir && git pull)
+fi
+
+
 ### Download checkpoints
 
 #model_file=${dir}/
@@ -166,30 +195,3 @@ if [[ ! -e ${model_file} ]]; then
     download ${model_url} ${model_file}
 fi
 
-this_node_dir=${nodes_dir}/ComfyUI-VideoHelperSuite
-if [[ ! -d $this_node_dir ]]; then
-    git clone https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite $this_node_dir
-else
-    (cd $this_node_dir && git pull)
-fi
-
-this_node_dir=${nodes_dir}/ComfyUI-RAVE
-if [[ ! -d $this_node_dir ]]; then
-    git clone https://github.com/spacepxl/ComfyUI-RAVE/tree/main $this_node_dir
-else
-    (cd $this_node_dir && git pull)
-fi
-
-this_node_dir=${nodes_dir}/ComfyUI_Noise
-if [[ ! -d $this_node_dir ]]; then
-    git clone https://github.com/BlenderNeko/ComfyUI_Noise $this_node_dir
-else
-    (cd $this_node_dir && git pull)
-fi
-
-this_node_dir=${nodes_dir}/comfyui-workspace-manager
-if [[ ! -d $this_node_dir ]]; then
-    git clone https://github.com/11cafe/comfyui-workspace-manager $this_node_dir
-else
-    (cd $this_node_dir && git pull)
-fi
