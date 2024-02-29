@@ -52,13 +52,6 @@ else
     (cd $this_node_dir && git pull)
 fi
 
-this_node_dir=${nodes_dir}/ComfyUI-RAVE
-if [[ ! -d $this_node_dir ]]; then
-    git clone https://github.com/spacepxl/ComfyUI-RAVE/tree/main $this_node_dir
-else
-    (cd $this_node_dir && git pull)
-fi
-
 this_node_dir=${nodes_dir}/ComfyUI_Noise
 if [[ ! -d $this_node_dir ]]; then
     git clone https://github.com/BlenderNeko/ComfyUI_Noise $this_node_dir
@@ -72,6 +65,71 @@ if [[ ! -d $this_node_dir ]]; then
 else
     (cd $this_node_dir && git pull)
 fi
+
+this_node_dir=${nodes_dir}/ComfyUI-Impact-Pack
+if [[ ! -d $this_node_dir ]]; then
+    git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack $this_node_dir
+else
+    (cd $this_node_dir && git pull)
+fi
+
+
+this_node_dir=${nodes_dir}/comfyui_controlnet_aux
+if [[ ! -d $this_node_dir ]]; then
+    git clone https://github.com/Fannovel16/comfyui_controlnet_aux $this_node_dir
+else
+    (cd $this_node_dir && git pull)
+fi
+
+
+this_node_dir=${nodes_dir}/ComfyUI-KJNodes
+if [[ ! -d $this_node_dir ]]; then
+    git clone https://github.com/kijai/ComfyUI-KJNodes $this_node_dir
+else
+    (cd $this_node_dir && git pull)
+fi
+
+
+this_node_dir=${nodes_dir}/ComfyUI_essentials
+if [[ ! -d $this_node_dir ]]; then
+    git clone https://github.com/cubiq/ComfyUI_essentials $this_node_dir
+else
+    (cd $this_node_dir && git pull)
+fi
+
+
+this_node_dir=${nodes_dir}/rgthree-comfy
+if [[ ! -d $this_node_dir ]]; then
+    git clone https://github.com/rgthree/rgthree-comfy $this_node_dir
+else
+    (cd $this_node_dir && git pull)
+fi
+
+
+this_node_dir=${nodes_dir}/was-node-suite-comfyui
+if [[ ! -d $this_node_dir ]]; then
+    git clone https://github.com/WASasquatch/was-node-suite-comfyui $this_node_dir
+else
+    (cd $this_node_dir && git pull)
+fi
+
+
+this_node_dir=${nodes_dir}/Derfuu_ComfyUI_ModdedNodes
+if [[ ! -d $this_node_dir ]]; then
+    git clone https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes $this_node_dir
+else
+    (cd $this_node_dir && git pull)
+fi
+
+
+this_node_dir=${nodes_dir}/ComfyUI-Crystools
+if [[ ! -d $this_node_dir ]]; then
+    git clone https://github.com/crystian/ComfyUI-Crystools $this_node_dir
+else
+    (cd $this_node_dir && git pull)
+fi
+
+
 
 
 ### Download checkpoints
@@ -125,8 +183,8 @@ if [[ ! -e ${model_file} ]]; then
     download ${model_url} ${model_file}
 fi
 
-model_file=${checkpoints_dir}/xenoxtcLCMEditionArtToon_v10.safetensors
-model_url=https://civitai.com/api/download/models/257630
+model_file=${checkpoints_dir}/cetusMix_Whalefall2.safetensors
+model_url=https://civitai.com/api/download/models/105924
 if [[ ! -e ${model_file} ]]; then
     printf "xenoxtcLCMEditionArtToon_v10.safetensors...\n"
     download ${model_url} ${model_file}
@@ -146,50 +204,78 @@ if [[ ! -e ${model_file} ]]; then
     download ${model_url} ${model_file}
 fi
 
-model_file=${controlnet_dir}/
+model_file=${controlnet_dir}/control_v11f1e_sd15_tile.pth
 model_url=https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1e_sd15_tile.pth
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${controlnet_dir}/
+model_file=${controlnet_dir}/diff_control_sd15_temporalnet_fp16.safetensors
+model_url=https://huggingface.co/CiaraRowles/TemporalNet/resolve/main/diff_control_sd15_temporalnet_fp16.safetensors
+if [[ ! -e ${model_file} ]]; then
+    printf "...\n"
+    download ${model_url} ${model_file}
+fi
+
+model_file=${controlnet_dir}/control_v11f1p_sd15_depth.pth
 model_url=https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1p_sd15_depth.pth
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${controlnet_dir}/
+model_file=${controlnet_dir}/control_v11p_sd15_softedge.pth
 model_url=https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_softedge.pth
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${controlnet_dir}/
+model_file=${controlnet_dir}/control_v11p_sd15_openpose.pth
 model_url=https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_openpose.pth
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${controlnet_dir}/
+model_file=${controlnet_dir}/control-lora-depth-rank128.safetensors
 model_url=https://huggingface.co/stabilityai/control-lora/resolve/main/control-LoRAs-rank128/control-lora-depth-rank128.safetensors
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${controlnet_dir}/
+model_file=${controlnet_dir}/OpenPoseXL2.safetensors
 model_url=https://huggingface.co/thibaud/controlnet-openpose-sdxl-1.0/resolve/main/OpenPoseXL2.safetensors
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${controlnet_dir}/
+model_file=${controlnet_dir}/controlnet-sd-xl-1.0-softedge-dexined.safetensors
 model_url=https://huggingface.co/SargeZT/controlnet-sd-xl-1.0-softedge-dexined/resolve/main/controlnet-sd-xl-1.0-softedge-dexined.safetensors
+if [[ ! -e ${model_file} ]]; then
+    printf "...\n"
+    download ${model_url} ${model_file}
+fi
+
+model_file=${loras_dir}/tifa-nvwls-v1-final.safetensors
+model_url=https://civitai.com/api/download/models/92744
+if [[ ! -e ${model_file} ]]; then
+    printf "...\n"
+    download ${model_url} ${model_file}
+fi
+
+model_file=${loras_dir}/tifa-nvwls-v2.safetensors
+model_url=https://civitai.com/api/download/models/311382
+if [[ ! -e ${model_file} ]]; then
+    printf "...\n"
+    download ${model_url} ${model_file}
+fi
+
+model_file=${loras_dir}/3DMM_V12.safetensors
+model_url=https://civitai.com/api/download/models/107366
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
