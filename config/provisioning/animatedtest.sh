@@ -190,8 +190,8 @@ if [[ ! -e ${model_file} ]]; then
     download ${model_url} ${model_file}
 fi
 
-model_file=${animated_models_dir}/animatelcmFastVideo_v10beta.zip
-model_url=https://civitai.com/api/download/models/326487
+model_file=${animated_models_dir}/AnimateLCM_sd15_t2v.ckpt
+model_url=https://huggingface.co/wangfuyun/AnimateLCM/resolve/main/AnimateLCM_sd15_t2v.ckpt
 if [[ ! -e ${model_file} ]]; then
     printf "animatelcmFastVideo_v10beta.zip...\n"
     download ${model_url} ${model_file}
