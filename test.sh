@@ -97,84 +97,84 @@ if [[ ! -e ${model_file} ]]; then
     download ${model_url} ${model_file}
 fi
 
-model_file=${controlnet_dir}/
+model_file=${controlnet_dir}/control_v11f1e_sd15_tile.pth
 model_url=https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1e_sd15_tile.pth
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${controlnet_dir}/
+model_file=${controlnet_dir}/control_v11f1p_sd15_depth.pth
 model_url=https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1p_sd15_depth.pth
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${controlnet_dir}/
+model_file=${controlnet_dir}/control_v11p_sd15_softedge.pth
 model_url=https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_softedge.pth
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${controlnet_dir}/
+model_file=${controlnet_dir}/control_v11p_sd15_openpose.pth
 model_url=https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_openpose.pth
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${controlnet_dir}/
+model_file=${controlnet_dir}/control_v11p_sd15_lineart.pth
 model_url=https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_lineart.pth
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${controlnet_dir}/
+model_file=${controlnet_dir}/diff_control_sd15_temporalnet_fp16.safetensors
 model_url=https://huggingface.co/CiaraRowles/TemporalNet/resolve/main/diff_control_sd15_temporalnet_fp16.safetensors
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${loras_dir}/
+model_file=${loras_dir}/Hyper-SD15-1step-lora.safetensors
 model_url=https://huggingface.co/ByteDance/Hyper-SD/resolve/main/Hyper-SD15-1step-lora.safetensors
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${loras_dir}/
+model_file=${loras_dir}/Hyper-SD15-2step-lora.safetensors
 model_url=https://huggingface.co/ByteDance/Hyper-SD/resolve/main/Hyper-SD15-2steps-lora.safetensors
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${loras_dir}/
+model_file=${loras_dir}/Hyper-SD15-4steps-lora.safetensors
 model_url=https://huggingface.co/ByteDance/Hyper-SD/resolve/main/Hyper-SD15-4steps-lora.safetensors
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${loras_dir}/
+model_file=${loras_dir}/Hyper-SD15-8steps-CFG-lora.safetensors
 model_url=https://huggingface.co/ByteDance/Hyper-SD/resolve/main/Hyper-SD15-8steps-CFG-lora.safetensors
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${loras_dir}/
+model_file=${loras_dir}/Hyper-SD15-8steps-lora.safetensors
 model_url=https://huggingface.co/ByteDance/Hyper-SD/resolve/main/Hyper-SD15-8steps-lora.safetensors
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
     download ${model_url} ${model_file}
 fi
 
-model_file=${loras_dir}/
+model_file=${loras_dir}/Hyper-SD15-12steps-CFG-lora.safetensors
 model_url=https://huggingface.co/ByteDance/Hyper-SD/resolve/main/Hyper-SD15-12steps-CFG-lora.safetensors
 if [[ ! -e ${model_file} ]]; then
     printf "...\n"
